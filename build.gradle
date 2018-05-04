@@ -1,0 +1,18 @@
+apply plugin: 'application'
+
+mainClassName = 'sample.javafx.Main'
+
+sourceCompatibility = '10.0'
+targetCompatibility = '10.0'
+
+compileJava.options.encoding = 'UTF-8'
+
+jar {
+    manifest {
+        attributes("Main-Class": "sample.javafx.Main")
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.7'
+}
